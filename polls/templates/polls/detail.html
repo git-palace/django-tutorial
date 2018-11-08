@@ -1,5 +1,6 @@
-{% if question %}
-    {{ question }}
-{% else %}
-    Not found
-{% endif %}
+<h1>{{ question.question_text }}</h1>
+<ul>
+    {% for choice in question.choice_set.all %}
+    <li>{{ choice }}</li>
+    {% endfor %}
+</ul>
